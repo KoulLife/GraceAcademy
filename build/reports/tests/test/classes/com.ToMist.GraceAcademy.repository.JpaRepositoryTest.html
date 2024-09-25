@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.576s</div>
+<div class="counter">0.549s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">75%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,112 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="삭제_테스트()"></a>
-<h3 class="failures">delete 테스트</h3>
-<span class="code">
-<pre>org.springframework.dao.DataIntegrityViolationException: could not execute statement [Referential integrity constraint violation: &quot;FKGHMOCQKGQS5TKMUCF5PUTW64T: PUBLIC.ARTICLE_COMMENT FOREIGN KEY(ARTICLE_ID) REFERENCES PUBLIC.ARTICLE(ID) (CAST(1 AS BIGINT))&quot;; SQL statement:
-delete from article where id=? [23503-224]] [delete from article where id=?]; SQL [delete from article where id=?]; constraint [FKGHMOCQKGQS5TKMUCF5PUTW64T: PUBLIC.ARTICLE_COMMENT FOREIGN KEY(ARTICLE_ID) REFERENCES PUBLIC.ARTICLE(ID) (CAST(1 AS BIGINT)); SQL statement:
-delete from article where id=? [23503-224]]
-	at app//org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
-	at app//org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
-	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
-	at app//org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
-	at app//org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
-	at app//org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
-	at app/jdk.proxy3/jdk.proxy3.$Proxy133.count(Unknown Source)
-	at app//com.ToMist.GraceAcademy.repository.JpaRepositoryTest.삭제_테스트(JpaRepositoryTest.java:87)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.7/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.7/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Referential integrity constraint violation: &quot;FKGHMOCQKGQS5TKMUCF5PUTW64T: PUBLIC.ARTICLE_COMMENT FOREIGN KEY(ARTICLE_ID) REFERENCES PUBLIC.ARTICLE(ID) (CAST(1 AS BIGINT))&quot;; SQL statement:
-delete from article where id=? [23503-224]] [delete from article where id=?]
-	at app//org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
-	at app//org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-	at app//org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at app//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
-	at app//org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
-	at app//org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
-	at app//org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
-	at app//org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
-	at app//org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
-	at app//org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
-	at app//org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
-	at app//org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
-	at app//org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
-	at app//org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:66)
-	at app//org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
-	at app//org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1375)
-	at app//org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:138)
-	at app//org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
-	at app//org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
-	at app//org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
-	at app//org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
-	at app//org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
-	at app//org.springframework.data.jpa.repository.support.SimpleJpaRepository.count(SimpleJpaRepository.java:611)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
-	at app//org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at app//org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at app//org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at app//org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
-	at app//org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
-	at app//org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:173)
-	at app//org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
-	at app//org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at app//org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
-	... 11 more
-Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: &quot;FKGHMOCQKGQS5TKMUCF5PUTW64T: PUBLIC.ARTICLE_COMMENT FOREIGN KEY(ARTICLE_ID) REFERENCES PUBLIC.ARTICLE(ID) (CAST(1 AS BIGINT))&quot;; SQL statement:
-delete from article where id=? [23503-224]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:365)
-	at app//org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:382)
-	at app//org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:256)
-	at app//org.h2.table.Table.fireConstraints(Table.java:1200)
-	at app//org.h2.table.Table.fireAfterRow(Table.java:1218)
-	at app//org.h2.command.dml.Delete.update(Delete.java:92)
-	at app//org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:256)
-	at app//org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
-	at app//org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
-	at app//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
-	... 51 more
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -180,34 +81,34 @@ delete from article where id=? [23503-224]
 <tr>
 <td class="success">select 테스트</td>
 <td class="success">givenTestData()</td>
-<td class="success">0.419s</td>
+<td class="success">0.412s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">delete 테스트</td>
-<td class="failures">삭제_테스트()</td>
-<td class="failures">0.115s</td>
-<td class="failures">failed</td>
+<td class="success">delete 테스트</td>
+<td class="success">삭제_테스트()</td>
+<td class="success">0.105s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">update 테스트</td>
 <td class="success">업데이트_테스트()</td>
-<td class="success">0.028s</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">insert 테스트</td>
 <td class="success">인서트테스트()</td>
-<td class="success">0.014s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:19:56.267 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ToMist.GraceAcademy.repository.JpaRepositoryTest]: JpaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:19:56.326 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ToMist.GraceAcademy.GraceAcademyApplication for test class com.ToMist.GraceAcademy.repository.JpaRepositoryTest
+<pre>10:52:51.015 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ToMist.GraceAcademy.repository.JpaRepositoryTest]: JpaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:52:51.076 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ToMist.GraceAcademy.GraceAcademyApplication for test class com.ToMist.GraceAcademy.repository.JpaRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -218,18 +119,18 @@ delete from article where id=? [23503-224]
 
  :: Spring Boot ::                (v3.3.4)
 
-2024-09-24T14:19:56.519+09:00  INFO 6874 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Starting JpaRepositoryTest using Java 17.0.7 with PID 6874 (started by dongik in /Users/dongik/Desktop/dongik/Project/GraceAcademy/GraceAcademy)
-2024-09-24T14:19:56.520+09:00 DEBUG 6874 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-09-24T14:19:56.520+09:00  INFO 6874 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-09-24T14:19:56.673+09:00  INFO 6874 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-24T14:19:56.694+09:00  INFO 6874 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
-2024-09-24T14:19:56.727+09:00  INFO 6874 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2024-09-24T14:19:56.808+09:00  INFO 6874 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:eee063cd-f955-4af0-a909-a2556ace6ffc;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-09-24T14:19:56.926+09:00  INFO 6874 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-24T14:19:56.951+09:00  INFO 6874 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-09-24T14:19:56.966+09:00  INFO 6874 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-24T14:19:57.092+09:00  INFO 6874 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-24T14:19:57.590+09:00  INFO 6874 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T10:52:51.267+09:00  INFO 18615 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Starting JpaRepositoryTest using Java 17.0.7 with PID 18615 (started by dongik in /Users/dongik/Desktop/dongik/Project/GraceAcademy/GraceAcademy)
+2024-09-25T10:52:51.268+09:00 DEBUG 18615 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-09-25T10:52:51.268+09:00  INFO 18615 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : The following 1 profile is active: &quot;testdb&quot;
+2024-09-25T10:52:51.412+09:00  INFO 18615 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T10:52:51.437+09:00  INFO 18615 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-09-25T10:52:51.463+09:00  INFO 18615 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-09-25T10:52:51.549+09:00  INFO 18615 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:209a173d-bf42-41be-99d9-9e8aa288cc85;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-09-25T10:52:51.665+09:00  INFO 18615 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T10:52:51.690+09:00  INFO 18615 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T10:52:51.705+09:00  INFO 18615 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T10:52:51.891+09:00  INFO 18615 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T10:52:52.592+09:00  INFO 18615 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists article cascade 
 Hibernate: 
@@ -283,8 +184,8 @@ Hibernate:
        add constraint FKghmocqkgqs5tkmucf5putw64t 
        foreign key (article_id) 
        references article
-2024-09-24T14:19:57.620+09:00  INFO 6874 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-24T14:19:57.850+09:00  INFO 6874 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Started JpaRepositoryTest in 1.486 seconds (process running for 2.089)
+2024-09-25T10:52:52.619+09:00  INFO 18615 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T10:52:52.863+09:00  INFO 18615 --- [    Test worker] c.T.G.repository.JpaRepositoryTest       : Started JpaRepositoryTest in 1.748 seconds (process running for 2.311)
 Hibernate: 
     select
         a1_0.id,
@@ -339,12 +240,37 @@ Hibernate:
 Hibernate: 
     delete 
     from
+        article_comment 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article_comment 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article_comment 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
         article 
     where
         id=?
-2024-09-24T14:19:58.385+09:00  WARN 6874 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23503, SQLState: 23503
-2024-09-24T14:19:58.385+09:00 ERROR 6874 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Referential integrity constraint violation: &quot;FKGHMOCQKGQS5TKMUCF5PUTW64T: PUBLIC.ARTICLE_COMMENT FOREIGN KEY(ARTICLE_ID) REFERENCES PUBLIC.ARTICLE(ID) (CAST(1 AS BIGINT))&quot;; SQL statement:
-delete from article where id=? [23503-224]
+Hibernate: 
+    select
+        count(*) 
+    from
+        article a1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        article_comment ac1_0
 Hibernate: 
     select
         a1_0.id,
@@ -364,8 +290,6 @@ Hibernate:
         article 
     set
         content=?,
-        created_at=?,
-        created_by=?,
         hashtag=?,
         modified_at=?,
         modified_by=?,
@@ -400,7 +324,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10.1</a> at 2024. 9. 24. 오후 2:19:58</p>
+<a href="http://www.gradle.org">Gradle 8.10.1</a> at 2024. 9. 25. 오전 10:52:55</p>
 </div>
 </div>
 </body>
