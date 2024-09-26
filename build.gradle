@@ -41,6 +41,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	testImplementation 'org.springframework.security:spring-security-test'
+
 	// queryDSL 설정
 	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
 	implementation "com.querydsl:querydsl-core"
