@@ -50,32 +50,23 @@
             </div>
         </div>
 
-        <table class="table">
+        <table class="table" id="article-table">
             <thead>
                 <tr>
-                    <th>제목</th>
-                    <th>해시태그</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
+                    <th class="title col-5">제목</th>
+                    <th class="hashtag col-2">해시태그</th>
+                    <th class="user-id col-2">작성자</th>
+                    <th class="created-at col-5">작성일</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>첫글</td>
-                    <td>#java</td>
-                    <td>장동익</td>
-                    <td>2024-09-26</td>
+                    <td class="title"><a>첫글</a></td>
+                    <td class="hashtag">#java</td>
+                    <td class="user-id">장동익</td>
+                    <td class="created-at"><time>2024-09-26</time></td>
                 </tr>
-            </tbody>
-
-            <tbody>
-            <tr>
-                <td>두번째 글</td>
-                <td>#python</td>
-                <td>이유빈</td>
-                <td>2024-09-26</td>
-            </tr>
             </tbody>
         </table>
 
@@ -91,7 +82,10 @@
 
     </main>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <hr>
+        푸터 삽입부
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
