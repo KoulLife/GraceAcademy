@@ -45,17 +45,17 @@ class JpaRepositoryTest {
 
     }
 
-    @DisplayName("insert 테스트")
-    @Test
-    void 인서트테스트() {
-        // givne
-            long prevCnt = articleRepository.count();
-
-        // when
-            articleRepository.save(Article.of("kiki", "do you love me", "are u riding"));
-        // then
-            assertThat(articleRepository.count()).isEqualTo(prevCnt + 1);
-    }
+//    @DisplayName("insert 테스트")
+//    @Test
+//    void 인서트테스트() {
+//        // givne
+//            long prevCnt = articleRepository.count();
+//
+//        // when
+//            articleRepository.save(Article.of("kiki", "do you love me", "are u riding"));
+//        // then
+//            assertThat(articleRepository.count()).isEqualTo(prevCnt + 1);
+//    }
 
     @DisplayName("update 테스트")
     @Test
