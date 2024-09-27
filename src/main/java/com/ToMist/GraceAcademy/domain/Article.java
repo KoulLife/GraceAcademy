@@ -20,8 +20,8 @@ import lombok.ToString;
 
 
 @Getter
-@ToString(callSuper = true)
-@Table(indexes = {
+@ToString(callSuper = true) // 부모 클래스의 정보도 추가
+@Table(indexes = {  // 데이터베이스 성능 최적화를 위해 특정 컬럼에 인덱스 사용
         @Index(columnList = "title"),
         @Index(columnList = "hashtag"),
         @Index(columnList = "createdAt"),
@@ -45,7 +45,6 @@ public class Article extends AuditingFields {
     @OrderBy("createdAt DESC")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
-
 
     protected Article() {}
 

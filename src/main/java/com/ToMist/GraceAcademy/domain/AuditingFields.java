@@ -16,8 +16,8 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Getter
 @ToString
-@EntityListeners(AuditingEntityListener.class)
-@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)  // 엔티티의 수정, 생성 시점을 알 수 있다.
+@MappedSuperclass   // 다른 클래스의 부모 클래스가 될 수 있다.
 public class AuditingFields {
 
     @DateTimeFormat(iso = ISO.DATE_TIME)

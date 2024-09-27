@@ -1,12 +1,9 @@
 package com.ToMist.GraceAcademy.controller;
 
 import com.ToMist.GraceAcademy.domain.type.SearchType;
-import com.ToMist.GraceAcademy.dto.ArticleWithCommentsDto;
-import com.ToMist.GraceAcademy.dto.response.ArticleCommentResponse;
 import com.ToMist.GraceAcademy.dto.response.ArticleResponse;
 import com.ToMist.GraceAcademy.dto.response.ArticleWithCommentsResponse;
 import com.ToMist.GraceAcademy.service.ArticleService;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;

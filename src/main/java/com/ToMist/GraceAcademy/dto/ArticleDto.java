@@ -1,7 +1,6 @@
 package com.ToMist.GraceAcademy.dto;
 
 import com.ToMist.GraceAcademy.domain.Article;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public record ArticleDto(
@@ -19,6 +18,7 @@ public record ArticleDto(
         return new ArticleDto(id, userAccountDto, title, content, hashtag, createdAt, createdBy, modifiedAt, modifiedBy);
     }
 
+    // Entity --> Dto
     public static ArticleDto from(Article entity) {
         return new ArticleDto(
                 entity.getId(),
@@ -33,6 +33,7 @@ public record ArticleDto(
         );
     }
 
+    // DTO --> Entity
     public Article toEntity() {
         return Article.of(
                 userAccountDto.toEntity(),

@@ -12,7 +12,7 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource
+@RepositoryRestResource // 별도의 컨트롤러를 작성하지 않아도 자동으로 HTTP API를 통해 리포지토리에서 CRUD 작업을 수행
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
         QuerydslPredicateExecutor<Article>,   // 엔티티 모든 필드에 검색 기능 추가 (exactly 검색)
